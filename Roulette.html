@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <style>
+      body {
+        min-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        font: Arial 14px;
+        background:black;
+      }
+      .butt {
+        background:#474747;
+        border:none;
+        position:center;
+        color:white;
+        width:43%;
+        height:60px;
+        margin-left:5%;
+        font-size:30px;
+        font-family:system-ui;
+        border-radius:20px;
+        
+      }
+      #text {
+        color:white;
+        text-align:center;
+        font-family:system-ui;
+        font-size:25px;
+        display:block;
+      }
+      #blocks {
+        display:block;
+        margin-bottom:3px;
+        margin:0;
+      }
+      #bye {
+        color:#560d0d;
+        font-size:24px;
+        text-align:center;
+        font-family:monospace;
+        display:none;
+      }
+      #rou {
+        display:none;
+      }
+      #well {
+        color:#680e0e;
+        text-align:center;
+        font-size:29px;
+        font-family:cursive;
+        
+      }
+      #bs {
+        background:rgba(255,255,255,.1);
+        font-size:monospace;
+      }
+      #al {
+        font-family:serif;
+      }
+      #wr {
+        background:#444;
+        outline:none;
+        margin-left:35%;
+      }
+      #wr.active {
+        outline:#a00;
+        background:#6e0000;
+      }
+      #sub {
+        border:none;
+        width:20%;
+        margin-left:35%;
+        background:transparent;
+        color:#620000;
+        font-size:21px;
+      }
+      #bb {
+        color:white;
+        background:transparent;
+        text-align:center;
+      }
+      #warn {
+ color:rgba(52,0,0,.91);
+        text-align:center;
+        font-family:monospace;
+        display:block;
+        margin-top:-3.9%;
+        margin-bottom:4%;
+      }
+#version {
+color:rgba(52,0,0,.91);
+        text-align:center;
+        font-family:monospace;
+        display:inline-block;
+       z-index: 2;
+  position:fixed;
+  margin-top:-2%;
+  margin-left:47%;
+      }
+    </style>
+    <!--<link rel="stylesheet" href="style.css"/>-->
+    <!--<script defer src="script.js"></script>-->
+  </head>
+  <body>
+  <div id="menu">   <p id="text"> Do you want play Russia Roulette???</p> <br>
+    <a id="warn">flash light warning</a>
+    <a id="version">Version 1.1</a>
+    <button class="butt" id="yes" onclick="yes()">Yes</button> 
+    <button class="butt" id="no" onclick="naebka()">No</button> 
+    <p id="bye">Okay, the button "No" is hidden... </p> <br>
+    
+    </div>
+    
+    
+    
+    
+    <div id="rou"> 
+   <p id="well"> Well, you <mark id="bs">NEED</mark> to guess which number I composed or you died))) <br>
+     From <al id="al"> 1</al> to <al id="al">6</al><p>  
+    <input name="1 to 6" id="wr"> <br> <button id="sub" onclick="opop()">Check</button>
+    
+    </div>
+    <div id="bb"> </div>
+    <script>
+      window.onload = function chak() {
+        i = 0;
+        
+        
+      }
+      function sleep(ms) {        
+   return new Promise(resolve => setTimeout(resolve, ms)); }  
+
+      function naebka(){
+      var jk = document.getElementById("no");
+      var fix = document.getElementById("yes");
+      fix.style.display = "block";
+      x = Math.floor(Math.random() * 49);
+      y = Math.floor(Math.random() * 49);
+      vid = Math.floor(Math.random() * 3);
+      jk.style.marginLeft = x + "%"
+      jk.style.marginTop = y + "%" // прыгающая кнопка
+        var count = i++ ;
+        
+        console.log(count)
+        if (count === 0) {
+       jk.style.background = "rgba(36,36,36,.95)";
+        jk.style.color = "#323232";
+      }
+        if (count === 1) {
+       jk.style.background = "rgba(13,13,13,.74)";
+        jk.style.color = "#232323";
+      }
+       if (count === 2) {
+         window.open("https://youtu.be/dQw4w9WgXcQ?si=o1eVIwjsbGLjiNp3");
+         console.log("Haha you really think he help you?");
+         jk.style.background = "#181818";
+        jk.style.color = "#1c1c1c";
+      }  if (count === 4) {
+        jk.style.background = "rgba(3,3,3,.64)";
+        jk.style.color = "#1b1b1b";
+      }
+        if (count === 5) {
+        var gg = document.getElementById("bye");
+        gg.style.display = "block";
+         jk.style.display = "none";
+         var yes = document.getElementById("yes");
+        yes.style.width = "90%"
+       }
+      }
+    
+      async function yes() {
+        
+       var df = document.getElementById("text");
+        df.innerText = "We starting...";
+        var men = document.getElementById("menu");
+       await sleep(1000);
+        men.style.display = "none";
+        await sleep(2000);
+         hs();
+      }
+      function hs() {
+       document.getElementById("rou").style.display = "block";
+      }
+      function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+      } 
+    async function opop(){
+       let random = getRandomInt(2);
+     
+       if (random = 0) {
+         let random = getRandomInt(2);
+       }
+        const you = document.getElementById("wr").value;
+      console.log(you);
+      console.error(random);
+        if (you === random){
+          document.getElementById("rou").style.display = "none";
+          var bb = document.getElementById("bb");
+          bb.innerText = "You win!";
+          bb.background = "white";
+          bb.background = "black";
+          console.log = "win"
+        } else {
+          document.getElementById("rou").style.display = "none";
+          var bb = document.getElementById("bb");
+          bb.innerText = "LOSER!";
+          console.log("dayn")
+          let B = 99;
+          for (let A = 0;A < 1000;A++){
+         document.body.style.backgroundColor = "#AA0000";
+            await sleep(B);
+            document.body.style.backgroundColor = "#39ff42";
+            await sleep(B);
+            document.body.style.backgroundColor = "white";
+            await sleep(B);
+            
+            document.body.style.backgroundColor = "red";
+            await sleep(B);
+            document.body.style.backgroundColor = "#2100ff";
+            await sleep(B);
+            document.body.style.backgroundColor = "#4cff00";
+            console.log(A)
+            document.body.style.backgroundColor = "black";
+            await sleep(B);
+            document.body.style.backgroundColor = "#00fffc";
+            await sleep(B);
+            document.body.style.backgroundColor = "#f4ff00";
+            await sleep(B);
+            document.body.style.backgroundColor = "#f30";
+            await sleep(B);
+            document.body.style.backgroundColor = "#f0b";
+            await sleep(B);
+            document.body.style.backgroundColor = "#666eff";
+            await sleep(B);
+        }
+        }
+        
+      }
+    </script>
+    </body>
+ 
